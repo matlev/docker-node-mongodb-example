@@ -1,0 +1,24 @@
+{
+  "name": "kraken-test",
+  "version": "1.0.0",
+  "description": "Kraken Quiz",
+  "author": "Mathew Levasseur <matlev91@gmail.com>",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest",
+    "dev": "nodemon src/index.js",
+    "debug": "nodemon --inspect=0.0.0.0:9229 src/index.js"
+  },
+  "keywords": [],
+  "dependencies": {
+    "mongodb": "^3.6.9",
+    "wait-port": "^0.2.9"
+  },
+  "devDependencies": {
+    "@shelf/jest-mongodb": "^1.2.5",
+    "jest": "^27.0.4",
+    "nodemon": "^2.0.7"
+  }
+}

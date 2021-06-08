@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+   kraken-test:
+      build: .
+      image: kraken-test:review-candidate
+      ports:
+         - 3000:3000
+      env_file:
+         - ./db-secrets.env
+      environment: 
+         MONGODB_PORT: 27017
+
+   mongodb:
+      image: mongo:latest
+      container_name: mongodb
+      volumes:
+         - mongodb-data:/data/db
+      ports:
+         - 27017:27017
+      env_file:
+         - ./db-secrets.env
+         
+volumes:
+   mongodb-data:
